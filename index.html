@@ -15,9 +15,9 @@
   </head>
   <body>
     <div class="container">
-      <table class="table">
-        <thead>
-          <tr>
+      <table id="cars" class="table table-striped table-hover">
+        <thead class="table-dark">
+          <tr id="1">
             <th scope="col">Lp.</th>
             <th scope="col">Marka pojazdu</th>
             <th scope="col">Model pojazdu</th>
@@ -25,19 +25,19 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
+          <tr id="2">
             <th scope="row">1</th>
             <td>Mercedes</td>
             <td>AMG</td>
             <td>2021</td>
           </tr>
-          <tr>
+          <tr id="3">
             <th scope="row">2</th>
             <td>Ford</td>
             <td>Mustang</td>
             <td>1967</td>
           </tr>
-          <tr>
+          <tr id="4">
             <th scope="row">3</th>
             <td>Fiat</td>
             <td>126p</td>
@@ -45,12 +45,20 @@
           </tr>
         </tbody>
       </table>
+      <div class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="Marka pojazdu" id="marka" />
+        <input type="text" class="form-control" placeholder="Model pojazdu" id="model" />
+        <input type="text" class="form-control" placeholder="Rok produkcji" id="rok" />
+        <button onClick="AddTab()" class="btn btn-outline-secondary" type="button" id="carBtn">
+          Add new Car
+        </button>
+      </div>
     </div>
+    <script src="src/js/script.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"
     ></script>
-    <script src="src/js/script.js"></script>
   </body>
 </html>
