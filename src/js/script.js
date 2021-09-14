@@ -1,7 +1,7 @@
 function AddTab() {
-  const newMarka = document.getElementById('marka').value;
-  const newModel = document.getElementById('model').value;
-  const newRok = document.getElementById('rok').value;
+  const newMarka = document.getElementById('marka');
+  const newModel = document.getElementById('model');
+  const newRok = document.getElementById('rok');
   let table = document.getElementById('cars');
   let x = table.rows.length;
   let id = 'tbl' + x;
@@ -12,7 +12,10 @@ function AddTab() {
   let cell3 = row.insertCell(2);
   let cell4 = row.insertCell(3);
   cell1.outerHTML = `<th> ${x}</th>`;
-  cell2.innerHTML = newMarka;
-  cell3.innerHTML = newModel;
-  cell4.innerHTML = newRok;
+  cell2.innerHTML = newMarka.value;
+  cell3.innerHTML = newModel.value;
+  cell4.innerHTML = newRok.value;
+  newMarka.value = '';
+  newModel.value = '';
+  newRok.value = '';
 }
