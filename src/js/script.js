@@ -1,4 +1,4 @@
-function AddTab() {
+const AddTab = () => {
   const newMarka = document.getElementById('marka');
   const newModel = document.getElementById('model');
   const newRok = document.getElementById('rok');
@@ -20,14 +20,14 @@ function AddTab() {
   newMarka.value = '';
   newModel.value = '';
   newRok.value = '';
-}
+};
 
-function DelTab(r) {
+const DelTab = (r) => {
   let x = r.parentNode.parentNode.rowIndex;
   document.getElementById('cars').deleteRow(x);
-}
+};
 
-function ChangeTab() {
+const ChangeTab = () => {
   const changer = document.querySelector('td');
   changer.addEventListener('click', (e) => {});
-}
+};
