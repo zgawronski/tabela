@@ -16,32 +16,27 @@
   <body>
     <div class="container">
       <table id="cars" class="table table-striped table-hover">
-        <thead class="table-dark">
+        <tbody>
           <tr id="1">
-            <th scope="col">Lp.</th>
-            <th scope="col">Marka pojazdu</th>
-            <th scope="col">Model pojazdu</th>
-            <th scope="col">Rok produkcji</th>
+            <th class="SSort" style="cursor: pointer" scope="col">Marka pojazdu</th>
+            <th class="SSort" style="cursor: pointer" scope="col">Model pojazdu</th>
+            <th class="ISort" style="cursor: pointer" scope="col">Rok produkcji</th>
             <th scope="col"></th>
           </tr>
-        </thead>
-        <tbody>
+
           <tr id="2">
-            <th scope="row">1</th>
             <td>Mercedes</td>
             <td>AMG</td>
             <td>2021</td>
             <th><input type="button" value="Usuń" onClick="DelTab(this)" /></th>
           </tr>
           <tr id="3">
-            <th scope="row">2</th>
             <td>Ford</td>
             <td>Mustang</td>
             <td>1967</td>
             <th><input type="button" value="Usuń" onClick="DelTab(this)" /></th>
           </tr>
           <tr id="4">
-            <th scope="row">3</th>
             <td>Fiat</td>
             <td>126p</td>
             <td>1986</td>
@@ -49,6 +44,7 @@
           </tr>
         </tbody>
       </table>
+      <script src="src/js/sort.js"></script>
       <div class="input-group mb-3">
         <button onClick="AddTab()" class="btn btn-secondary" type="button" id="carBtn">
           Dodaj

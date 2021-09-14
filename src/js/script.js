@@ -1,8 +1,8 @@
+const newMarka = document.getElementById('marka');
+const newModel = document.getElementById('model');
+const newRok = document.getElementById('rok');
+let table = document.getElementById('cars');
 const AddTab = () => {
-  const newMarka = document.getElementById('marka');
-  const newModel = document.getElementById('model');
-  const newRok = document.getElementById('rok');
-  let table = document.getElementById('cars');
   let x = table.rows.length;
   let id = 'tbl' + x;
   let row = table.insertRow(x);
@@ -11,23 +11,22 @@ const AddTab = () => {
   let cell2 = row.insertCell(1);
   let cell3 = row.insertCell(2);
   let cell4 = row.insertCell(3);
-  let cell5 = row.insertCell(4);
-  cell1.outerHTML = `<th> ${x}</th>`;
-  cell2.innerHTML = newMarka.value;
-  cell3.innerHTML = newModel.value;
-  cell4.innerHTML = newRok.value;
-  cell5.outerHTML = `<th><input type='button' value="Usuń" onClick="DelTab(this)"></th>`;
+
+  cell1.innerHTML = newMarka.value;
+  cell2.innerHTML = newModel.value;
+  cell3.innerHTML = newRok.value;
+  cell4.outerHTML = `<th><input type='button' value="Usuń" onClick="DelTab(this)"></th>`;
   newMarka.value = '';
   newModel.value = '';
   newRok.value = '';
 };
 
 const DelTab = (r) => {
-  let x = r.parentNode.parentNode.rowIndex;
-  document.getElementById('cars').deleteRow(x);
+  let de = r.parentNode.parentNode.rowIndex;
+  table.deleteRow(de);
 };
 
-const ChangeTab = () => {
-  const changer = document.querySelector('td');
-  changer.addEventListener('click', (e) => {});
-};
+// const ChangeTab = (r) => {
+//   let ed = r.parentNode.parentNode.cellIndex;
+//   ed.innerHTML = '<td><input type="text" id="r" /></td>';
+// };
