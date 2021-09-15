@@ -3,7 +3,7 @@ const newModel = document.getElementById('model');
 const newRok = document.getElementById('rok');
 let table = document.getElementById('cars');
 
-console.log(newMarka.value.length);
+// add new rows
 const AddTab = () => {
   let x = table.rows.length;
   let id = 'tbl' + x;
@@ -26,6 +26,7 @@ const AddTab = () => {
   }
 };
 
+// delete rows
 const DelTab = (r) => {
   let de = r.parentNode.parentNode.rowIndex;
   table.deleteRow(de);
