@@ -5,6 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="src/css/style.css" />
+    <!-- Font Awesome -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+      rel="stylesheet"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- MDB -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.css"
+      rel="stylesheet"
+    />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -15,9 +30,9 @@
   </head>
   <body>
     <div class="container">
-      <table id="cars" class="table table-striped table-hover">
+      <table id="cars" class="table table-datatable table-striped table-hover">
         <tbody>
-          <tr id="1">
+          <tr class="table-dark" id="1">
             <th class="SSort" style="cursor: pointer" scope="col">Marka pojazdu</th>
             <th class="SSort" style="cursor: pointer" scope="col">Model pojazdu</th>
             <th class="ISort" style="cursor: pointer" scope="col">Rok produkcji</th>
@@ -25,36 +40,40 @@
           </tr>
 
           <tr id="2">
-            <td>Mercedes</td>
-            <td>AMG</td>
-            <td>2021</td>
+            <td contenteditable="true">Mercedes</td>
+            <td contenteditable="true">AMG</td>
+            <td contenteditable="true">2021</td>
             <th><input type="button" value="Usuń" onClick="DelTab(this)" /></th>
           </tr>
           <tr id="3">
-            <td>Ford</td>
-            <td>Mustang</td>
-            <td>1967</td>
+            <td contenteditable="true">Ford</td>
+            <td contenteditable="true">Mustang</td>
+            <td contenteditable="true">1967</td>
             <th><input type="button" value="Usuń" onClick="DelTab(this)" /></th>
           </tr>
           <tr id="4">
-            <td>Fiat</td>
-            <td>126p</td>
-            <td>1986</td>
+            <td contenteditable="true">Fiat</td>
+            <td contenteditable="true">126p</td>
+            <td contenteditable="true">1986</td>
             <th><input type="button" value="Usuń" onClick="DelTab(this)" /></th>
           </tr>
         </tbody>
       </table>
       <script src="src/js/sort.js"></script>
       <div class="input-group mb-3">
-        <button onClick="AddTab()" class="btn btn-secondary" type="button" id="carBtn">
-          Dodaj
-        </button>
         <input type="text" class="form-control" placeholder="Marka pojazdu" id="marka" />
         <input type="text" class="form-control" placeholder="Model pojazdu" id="model" />
         <input type="text" class="form-control" placeholder="Rok produkcji" id="rok" />
+        <button onClick="AddTab()" class="btn btn-secondary" type="button" id="carBtn">
+          Dodaj
+        </button>
       </div>
     </div>
     <script src="src/js/script.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.js"
+    ></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"

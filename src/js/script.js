@@ -12,9 +12,9 @@ const AddTab = () => {
   let cell3 = row.insertCell(2);
   let cell4 = row.insertCell(3);
 
-  cell1.innerHTML = newMarka.value;
-  cell2.innerHTML = newModel.value;
-  cell3.innerHTML = newRok.value;
+  cell1.outerHTML = `<td contenteditable="true">${newMarka.value}</td>`;
+  cell2.outerHTML = `<td contenteditable="true">${newModel.value}</td>`;
+  cell3.outerHTML = `<td contenteditable="true">${newRok.value}</td>`;
   cell4.outerHTML = `<th><input type='button' value="Usuń" onClick="DelTab(this)"></th>`;
   newMarka.value = '';
   newModel.value = '';

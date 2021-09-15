@@ -95,7 +95,9 @@
     "type": "opencollective",
     "url": "https://opencollective.com/bootstrap"
   },
-  "dependencies": {},
+  "dependencies": {
+    "mdb-ui-kit": "^3.9.0"
+  },
   "peerDependencies": {
     "@popperjs/core": "^2.9.2"
   },
