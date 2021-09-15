@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="src/css/style.css" />
     <!-- Font Awesome -->
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
@@ -30,7 +29,7 @@
   </head>
   <body>
     <div class="container">
-      <table id="cars" class="table table-datatable table-striped table-hover">
+      <table id="cars" class="table table-datatable table-striped table-hover my-3">
         <tbody>
           <tr class="table-dark" id="1">
             <th class="SSort" style="cursor: pointer" scope="col">Marka pojazdu</th>
@@ -59,16 +58,21 @@
           </tr>
         </tbody>
       </table>
-      <script src="src/js/sort.js"></script>
-      <div class="input-group mb-3">
+      <div class="input-group">
         <input type="text" class="form-control" placeholder="Marka pojazdu" id="marka" />
         <input type="text" class="form-control" placeholder="Model pojazdu" id="model" />
         <input type="text" class="form-control" placeholder="Rok produkcji" id="rok" />
-        <button onClick="AddTab()" class="btn btn-secondary" type="button" id="carBtn">
+        <button
+          onClick="AddTab()"
+          class="btn btn-outline-secondary btn-sm"
+          type="button"
+          id="carBtn"
+        >
           Dodaj
         </button>
       </div>
     </div>
+    <script src="src/js/sort.js"></script>
     <script src="src/js/script.js"></script>
     <script
       type="text/javascript"
