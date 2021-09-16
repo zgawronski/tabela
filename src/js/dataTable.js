@@ -24,6 +24,8 @@ const newTable = (tableData) => {
       row.appendChild(cell);
     });
 
+    let cell4 = row.insertCell();
+    cell4.outerHTML = `<th><input type='button' value="Usuń" onClick="DelTab(this)"></th>`;
     tableBody.appendChild(row);
   });
 };
