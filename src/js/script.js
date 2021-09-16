@@ -3,6 +3,7 @@ const newModel = document.getElementById('model');
 const newRok = document.getElementById('rok');
 let table = document.getElementById('cars');
 
+// localStorage do przechowywania danych
 const testTable = [
   ['Mercedes', 'AMG', '2021'],
   ['Ford', 'Mustang', '1967'],
@@ -39,11 +40,7 @@ const AddTab = () => {
     });
     const localTable = tableInfo.splice(1, z);
 
-    console.log(localTable);
-
     const chk = JSON.parse(localStorage.getItem('Table'));
-
-    console.log(chk);
 
     if (chk !== localTable) {
       localStorage.setItem('Table', JSON.stringify(localTable));

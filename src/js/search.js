@@ -8,7 +8,7 @@ const SearchTab = () => {
   if (searchInput.value.length == 0) {
   } else {
     for (i = 0; i < tr.length; i++) {
-      td = tr[i].getElementsByTagName('td')[1];
+      td = tr[i].getElementsByTagName('td')[0];
       if (td) {
         txtValue = td.textContent || td.innerText;
         if (txtValue.toUpperCase().indexOf(filter) > -1) {
@@ -16,9 +16,8 @@ const SearchTab = () => {
         } else {
           tr[i].style.display = 'none';
         }
-
-        console.log(filter);
       }
     }
+    searchInput.value = '';
   }
 };
