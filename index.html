@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="src/css/styles.css" />
 
-    <!-- Font Awesome -- />
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
       rel="stylesheet"
@@ -50,7 +49,7 @@
     <div class="container">
       <table id="cars" class="table table-datatable table-striped table-hover my-3">
         <tbody id="tbody">
-          <tr class="table-dark" id="1">
+          <tr class="table-dark" id="tbl0">
             <th class="SSort" style="cursor: pointer" scope="col">Marka pojazdu</th>
             <th class="SSort" style="cursor: pointer" scope="col">Model pojazdu</th>
             <th class="ISort" style="cursor: pointer" scope="col">Rok produkcji</th>
@@ -72,18 +71,26 @@
           Dodaj
         </button>
       </div>
-      <div class="input-group mt-3">
+      <div class="input-group my-3 jc-c">
         <div class="form-outline">
-          <input type="search" id="search-input" class="form-control" />
+          <input id="search-input" type="search" class="form-control" />
           <label class="form-label" for="search-input">Search</label>
         </div>
-        <button type="button" class="btn btn-primary" id="search-button">
-          <i class="fas fa-search"></i>
+        <button
+          onClick="SearchTab()"
+          id="search-button"
+          type="button"
+          class="btn btn-outline-secondary"
+        >
+          szukaj
         </button>
       </div>
     </div>
-    <script src="src/js/sort.js"></script>
+
     <script src="src/js/script.js"></script>
+
+    <script src="src/js/sort.js"></script>
+    <script src="src/js/search.js"></script>
     <script
       type="text/javascript"
       src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.js"

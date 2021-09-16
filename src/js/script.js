@@ -3,6 +3,13 @@ const newModel = document.getElementById('model');
 const newRok = document.getElementById('rok');
 let table = document.getElementById('cars');
 
+const testTable = [
+  ['Mercedes', 'AMG', '2021'],
+  ['Ford', 'Mustang', '1967'],
+  ['Fiat', '126p', '1985'],
+];
+if (localStorage == 0) localStorage.setItem('Table', JSON.stringify(testTable));
+
 // add new rows
 const AddTab = () => {
   let x = table.rows.length;
@@ -23,6 +30,24 @@ const AddTab = () => {
     newMarka.value = '';
     newModel.value = '';
     newRok.value = '';
+
+    let z = document.getElementById('cars').rows.length;
+    let tableInfo = Array.prototype.map.call(document.querySelectorAll('table tr'), function (tr) {
+      return Array.prototype.map.call(tr.querySelectorAll('td'), function (td) {
+        return td.innerHTML;
+      });
+    });
+    const localTable = tableInfo.splice(1, z);
+
+    console.log(localTable);
+
+    const chk = JSON.parse(localStorage.getItem('Table'));
+
+    console.log(chk);
+
+    if (chk !== localTable) {
+      localStorage.setItem('Table', JSON.stringify(localTable));
+    }
   }
 };
 
