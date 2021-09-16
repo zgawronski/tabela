@@ -1,3 +1,13 @@
+// localStorage do przechowywania danych
+const testTable = [
+  ['Mercedes', 'AMG', '2021'],
+  ['Ford', 'Mustang', '1967'],
+  ['Fiat', '126p', '1985'],
+];
+
+if (localStorage.getItem('Table') === null)
+  localStorage.setItem('Table', JSON.stringify(testTable));
+
 const newTable = (tableData) => {
   let table = document.getElementById('cars');
   let tableBody = document.getElementById('tbody');

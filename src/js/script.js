@@ -3,14 +3,6 @@ const newModel = document.getElementById('model');
 const newRok = document.getElementById('rok');
 let table = document.getElementById('cars');
 
-// localStorage do przechowywania danych
-const testTable = [
-  ['Mercedes', 'AMG', '2021'],
-  ['Ford', 'Mustang', '1967'],
-  ['Fiat', '126p', '1985'],
-];
-if (localStorage == 0) localStorage.setItem('Table', JSON.stringify(testTable));
-
 // add new rows
 const AddTab = () => {
   let x = table.rows.length;

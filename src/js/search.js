@@ -1,10 +1,10 @@
 const searchButton = document.getElementById('search-button');
 const searchInput = document.getElementById('search-input');
 const tab = document.getElementById('cars');
-const tr = tab.getElementsByTagName('tr');
-const filter = searchInput.value.toUpperCase();
-
 const SearchTab = () => {
+  const tr = tab.getElementsByTagName('tr');
+  const filter = searchInput.value.toUpperCase();
+
   if (searchInput.value.length == 0) {
   } else {
     for (i = 0; i < tr.length; i++) {
