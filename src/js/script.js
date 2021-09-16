@@ -24,19 +24,20 @@ const AddTab = () => {
     newModel.value = '';
     newRok.value = '';
 
-    let z = document.getElementById('cars').rows.length;
-    let tableInfo = Array.prototype.map.call(document.querySelectorAll('table tr'), function (tr) {
-      return Array.prototype.map.call(tr.querySelectorAll('td'), function (td) {
-        return td.innerHTML;
-      });
-    });
-    const localTable = tableInfo.splice(1, z);
+    // let z = document.getElementById('cars').rows.length;
+    // let tableInfo = Array.prototype.map.call(document.querySelectorAll('table tr'), function (tr) {
+    //   return Array.prototype.map.call(tr.querySelectorAll('td'), function (td) {
+    //     return td.innerHTML;
+    //   });
+    // });
+    // const localTable = tableInfo.splice(1, z);
 
-    const chk = JSON.parse(localStorage.getItem('Table'));
+    // const chk = JSON.parse(localStorage.getItem('Table'));
 
-    if (chk !== localTable) {
-      localStorage.setItem('Table', JSON.stringify(localTable));
-    }
+    // if (chk !== localTable) {
+    //   localStorage.setItem('Table', JSON.stringify(localTable));
+    // }
+    localRefresher();
   }
 };
 
@@ -44,4 +45,22 @@ const AddTab = () => {
 const DelTab = (r) => {
   let de = r.parentNode.parentNode.rowIndex;
   table.deleteRow(de);
+
+  localRefresher();
+};
+
+const localRefresher = () => {
+  let z = document.getElementById('cars').rows.length;
+  let tableInfo = Array.prototype.map.call(document.querySelectorAll('table tr'), function (tr) {
+    return Array.prototype.map.call(tr.querySelectorAll('td'), function (td) {
+      return td.innerHTML;
+    });
+  });
+  const localTable = tableInfo.splice(1, z);
+
+  const chk = JSON.parse(localStorage.getItem('Table'));
+
+  if (chk !== localTable) {
+    localStorage.setItem('Table', JSON.stringify(localTable));
+  }
 };
