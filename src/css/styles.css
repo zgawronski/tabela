@@ -56,7 +56,7 @@
   transform: rotate(-45deg);
 }
 
-.mheader .overlay {
+.mheader .lays {
   opacity: 0;
   position: fixed;
   inset: 0;
@@ -126,4 +126,3 @@
 .mheader__links a:hover::before {
   opacity: 1;
 }
-/*# sourceMappingURL=styles.css.map */

@@ -1,5 +1,6 @@
 // localStorage do przechowywania danych
-const testTable = [
+const warehouse = () => {
+  const testTable = [
   ['Mercedes', 'AMG', '2021'],
   ['Ford', 'Mustang', '1967'],
   ['Fiat', '126p', '1985'],
@@ -7,6 +8,9 @@ const testTable = [
 
 if (localStorage.getItem('Table') === null)
   localStorage.setItem('Table', JSON.stringify(testTable));
+}
+
+warehouse()
 
 const newTable = (tableData) => {
   let table = document.getElementById('cars');
