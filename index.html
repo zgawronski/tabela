@@ -4,7 +4,9 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Font Awesome -->
+    <link rel="stylesheet" href="src/css/styles.css" />
+
+    <!-- Font Awesome -- />
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
       rel="stylesheet"
@@ -28,36 +30,35 @@
     <title>Document</title>
   </head>
   <body>
+    <header class="mheader">
+      <div class="lays has-fade"></div>
+      <nav class="flexible flexible-jc-c flexible-ai-c">
+        <a href="/" class="mheader__logo">
+          <img src="img/LOGO.png" alt="LOGO" />
+        </a>
+        <a href="#" id="btnHamb" class="mheader__togle hide-for-d">
+          <span></span>
+          <span></span>
+          <span></span>
+        </a>
+
+        <div class="mheader__links hide-for-m">
+          <a href="/">Home</a><a href="#">Samochody</a><a href="#">Kontakt</a><a href="#">About</a>
+        </div>
+      </nav>
+    </header>
     <div class="container">
       <table id="cars" class="table table-datatable table-striped table-hover my-3">
-        <tbody>
+        <tbody id="tbody">
           <tr class="table-dark" id="1">
             <th class="SSort" style="cursor: pointer" scope="col">Marka pojazdu</th>
             <th class="SSort" style="cursor: pointer" scope="col">Model pojazdu</th>
             <th class="ISort" style="cursor: pointer" scope="col">Rok produkcji</th>
             <th scope="col"></th>
           </tr>
-
-          <tr id="2">
-            <td contenteditable="true">Mercedes</td>
-            <td contenteditable="true">AMG</td>
-            <td contenteditable="true">2021</td>
-            <th><input type="button" value="Usuń" onClick="DelTab(this)" /></th>
-          </tr>
-          <tr id="3">
-            <td contenteditable="true">Ford</td>
-            <td contenteditable="true">Mustang</td>
-            <td contenteditable="true">1967</td>
-            <th><input type="button" value="Usuń" onClick="DelTab(this)" /></th>
-          </tr>
-          <tr id="4">
-            <td contenteditable="true">Fiat</td>
-            <td contenteditable="true">126p</td>
-            <td contenteditable="true">1986</td>
-            <th><input type="button" value="Usuń" onClick="DelTab(this)" /></th>
-          </tr>
         </tbody>
       </table>
+      <script src="src/js/dataTable.js"></script>
       <div class="input-group">
         <input type="text" class="form-control" placeholder="Marka pojazdu" id="marka" />
         <input type="text" class="form-control" placeholder="Model pojazdu" id="model" />
