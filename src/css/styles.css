@@ -1,0 +1,129 @@
+.flexible {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.flexible-jc-sb {
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.flexible-jc-c {
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.flexible-ai-c {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+@media (max-width: 63.9375em) {
+  .hide-for-m {
+    display: none;
+  }
+}
+
+@media (min-width: 64em) {
+  .hide-for-d {
+    display: none;
+  }
+}
+
+.mheader {
+  position: relative;
+}
+
+.mheader.open .lays {
+  display: block;
+}
+
+.mheader.open .mheader__togle > span:first-child {
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.mheader.open .mheader__togle > span:nth-child(2) {
+  opacity: 0;
+}
+
+.mheader.open .mheader__togle > span:last-child {
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.mheader .overlay {
+  opacity: 0;
+  position: fixed;
+  inset: 0;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(black), to(transparent));
+  background-image: linear-gradient(black, transparent);
+}
+
+.mheader nav {
+  position: relative;
+  background-color: #fafafa;
+  padding-top: 1.0625rem;
+  padding-left: 5rem;
+  padding-right: 5rem;
+  padding-bottom: 5rem;
+}
+
+.mheader__logo img {
+  margin-right: 5rem;
+  width: 5rem;
+  height: 5rem;
+}
+
+.mheader__togle span {
+  display: block;
+  width: 26px;
+  height: 2px;
+  background-color: black;
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+  -webkit-transform-origin: 6px 1px;
+  transform-origin: 6px 1px;
+}
+
+.mheader__togle span:not(:last-child) {
+  margin-bottom: 3px;
+}
+
+.mheader__links a {
+  position: relative;
+  font-size: 0.875rem;
+  font-weight: bolder;
+  text-decoration: none;
+  color: #b3b3b3;
+}
+
+.mheader__links a:not(:last-child) {
+  margin-right: 32px;
+}
+
+.mheader__links a::before {
+  content: '';
+  position: absolute;
+  height: 5px;
+  left: 0;
+  right: 0;
+  bottom: -30px;
+  background: #1c5182;
+  opacity: 0;
+  -webkit-transition: color 300ms ease-in-out;
+  transition: color 300ms ease-in-out;
+}
+
+.mheader__links a:hover {
+  color: #1c5182;
+}
+
+.mheader__links a:hover::before {
+  opacity: 1;
+}
+/*# sourceMappingURL=styles.css.map */
